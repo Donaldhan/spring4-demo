@@ -12,11 +12,11 @@ public class AnnotationConfigApplicationContextDemo3 {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-		ctx.scan("cn.home");
+		ctx.scan("cn.home.modules");
 	    ctx.refresh();
-		MyService myService = ctx.getBean(MyService.class);
-		myService.doStuff();
 		UserService userService = ctx.getBean(UserService.class);
 		userService.saveUser();
+		MyService myService = ctx.getBean(MyService.class);
+		myService.doStuff();
 	}
 }
