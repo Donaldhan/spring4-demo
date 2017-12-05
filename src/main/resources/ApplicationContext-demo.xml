@@ -8,6 +8,8 @@
 	<import resource="services.xml" />
 	<import resource="resources/messageSource.xml" />
 	<import resource="/resources/themeSource.xml" />
+	 <!-- enable processing of annotations such as @Autowired and @Configuration -->
+    <context:annotation-config/>
 	<context:component-scan base-package="org.example">
 		<context:include-filter type="regex"
 			expression=".*Stub.*Repository" />
