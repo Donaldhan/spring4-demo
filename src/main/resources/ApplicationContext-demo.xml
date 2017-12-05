@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
 	<import resource="services.xml" />
 	<import resource="resources/messageSource.xml" />
 	<import resource="/resources/themeSource.xml" />
+	<context:component-scan base-package="org.example">
+		<context:include-filter type="regex"
+			expression=".*Stub.*Repository" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Repository" />
+	</context:component-scan>
+	<context:component-scan base-package="org.example"
+		name-generator="org.example.MyNameGenerator" />
+	<context:component-scan base-package="org.example"
+		scope-resolver="org.example.MyScopeResolver" />
 	<bean id="bean1" class="..." />
 	<bean id="bean2" class="..." />
 	<!-- services -->
