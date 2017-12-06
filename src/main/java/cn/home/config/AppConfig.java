@@ -108,6 +108,7 @@ public class AppConfig implements TransactionManagementConfigurer {
 		try {
 			transactionManager = txManager();
 		} catch (SQLException e) {
+			log.error("transactionManager config exception...",e);
 			e.printStackTrace();
 		}
 		return transactionManager;
