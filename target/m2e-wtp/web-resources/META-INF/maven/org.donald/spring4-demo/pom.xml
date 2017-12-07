@@ -12,6 +12,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		<junit.version>4.12</junit.version>
+		<commons.fileupload.version>1.2.2</commons.fileupload.version>
 		<spring.version>4.3.13.RELEASE</spring.version>
 		<aspectjrt.version>1.5.4</aspectjrt.version>
 		<aspectjweaver.version>1.7.2</aspectjweaver.version>
@@ -21,6 +22,7 @@
 		<mybatis.version>3.2.8</mybatis.version>
 		<mybatis-spring.version>1.2.2</mybatis-spring.version>
 		<jackson-2-version>2.3.2</jackson-2-version>
+		<fastjson.version>1.1.41</fastjson.version>
 		<servlet.version>3.0.1</servlet.version>
 		<jsp.version>2.2</jsp.version>
 		<jstl.servlet.version>1.2</jstl.servlet.version>
@@ -35,6 +37,12 @@
 		</repository>
 	</repositories>
 	<dependencies><!-- aspectj相关jar包 -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons.fileupload.version}</version>
+			<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
@@ -112,7 +120,7 @@
 			<artifactId>druid</artifactId>
 			<version>${druid.version}</version>
 		</dependency>
-		
+
 		<!-- mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -124,7 +132,7 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>${mybatis-spring.version}</version>
 		</dependency>
-		
+
 		<!-- web相关jar包 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -175,6 +183,11 @@
 			<groupId>com.fasterxml.jackson.module</groupId>
 			<artifactId>jackson-module-jaxb-annotations</artifactId>
 			<version>${jackson-2-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-parameter-names</artifactId>
+			<version>2.9.2</version>
 		</dependency>
 	</dependencies>
 	<build>
