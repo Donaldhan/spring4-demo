@@ -57,7 +57,6 @@
 		<filter-name>httpPutFormFilter</filter-name>
 		<filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>
 	</filter>
-
 	<filter-mapping>
 		<filter-name>httpPutFormFilter</filter-name>
 		<servlet-name>springmvc</servlet-name>

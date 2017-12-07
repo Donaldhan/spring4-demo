@@ -13,6 +13,7 @@
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		<junit.version>4.12</junit.version>
 		<commons.fileupload.version>1.2.2</commons.fileupload.version>
+		<commons.collections.version>3.2</commons.collections.version>
 		<spring.version>4.3.13.RELEASE</spring.version>
 		<aspectjrt.version>1.5.4</aspectjrt.version>
 		<aspectjweaver.version>1.7.2</aspectjweaver.version>
@@ -24,9 +25,12 @@
 		<jackson-2-version>2.3.2</jackson-2-version>
 		<fastjson.version>1.1.41</fastjson.version>
 		<servlet.version>3.0.1</servlet.version>
+		<!-- jsp -->
 		<jsp.version>2.2</jsp.version>
 		<jstl.servlet.version>1.2</jstl.servlet.version>
 		<standard.version>1.1.2</standard.version>
+		<!-- freemaker -->
+		<freemarker.version>2.3.22</freemarker.version>
 	</properties>
 	<repositories>
 		<!-- <repository> <id>nexus</id> <name>local nexus server</name> <url>http://192.168.200.92:8081/nexus/content/groups/public</url> 
@@ -41,6 +45,12 @@
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>${commons.fileupload.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${commons.collections.version}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -90,6 +100,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
@@ -150,6 +165,12 @@
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
 			<version>${standard.version}</version>
+		</dependency>
+		<!-- freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
 		</dependency>
 		<!-- Just the annotations; use this dependency if you want to attach annotations 
 			to classes without connecting them to the code. -->
