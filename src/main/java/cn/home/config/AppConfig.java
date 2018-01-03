@@ -31,7 +31,7 @@ import cn.home.modules.beans.service.impl.MyServiceImpl;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan(basePackages = "cn.home.modules")
-@PropertySource("classpath:jdbc.properties")
+@PropertySource("classpath*:jdbc.properties")
 public class AppConfig implements TransactionManagementConfigurer {
 	private static final Logger log = LoggerFactory.getLogger(Logger.class);
 	private static final String JDBC_URL = "jdbc.url";

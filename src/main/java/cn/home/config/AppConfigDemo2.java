@@ -17,7 +17,7 @@ import cn.home.modules.beans.entity.Foo;
 @ComponentScan(basePackages = "cn.home")
 @EnableTransactionManagement
 @DependsOn("txManager")
-@ImportResource("classpath:properties-config.xml")
+@ImportResource("classpath*:properties-config.xml")
 @Profile("production")
 public class AppConfigDemo2 {
 	@Value("${jdbc.url}")

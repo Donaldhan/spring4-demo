@@ -14,7 +14,7 @@ import cn.home.modules.beans.entity.Foo;
 
 @Configuration
 @ComponentScan(basePackages = "cn.home")
-@ImportResource("classpath:properties-config.xml")
+@ImportResource("classpath*:properties-config.xml")
 @Profile("default")
 public class DbConfigDefault {
 	@Value("${jdbc.url}")
